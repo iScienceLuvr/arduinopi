@@ -54,9 +54,11 @@
 <h3>
 <a name="how-to-type" class="anchor" href="#how-to-type"><span class="octicon octicon-link"></span></a>How to type</h3>
 
-<p>GKOS Alphabet
-<img src="http://koti.mbnet.fi/gkos/gkoscom/g-buttons_letters_us2_p.jpg" alt="">
-The GKOS Alphabet.</p>
+<p>GKOS Alphabet</p>
+
+<p><img src="http://koti.mbnet.fi/gkos/gkoscom/g-buttons_letters_us2_p.jpg" alt=""></p>
+
+<p>The GKOS Alphabet.</p>
 
 <p>Letters G, K, O, S and W require two keys, and they also function as modifiers (shifts) changing the characters on other keys. For example, to press A, press the top left button. But to press H, press the top two buttons on the right ( the G key) and the top left button.</p>
 
@@ -65,8 +67,9 @@ The GKOS Alphabet.</p>
 <h3>
 <a name="gkos-hardware" class="anchor" href="#gkos-hardware"><span class="octicon octicon-link"></span></a>GKOS Hardware</h3>
 
-<p><img src="http://koti.mbnet.fi/gkos/gkoscom/arduino/arduino_pads_01.png" alt="">
-Gkos keypad wiring</p>
+<p><img src="http://koti.mbnet.fi/gkos/gkoscom/arduino/arduino_pads_01.png" alt=""></p>
+
+<p>Gkos keypad wiring</p>
 
 <p>In the Arduino Pi project, the analog pins are used.</p>
 
@@ -75,11 +78,11 @@ Gkos keypad wiring</p>
 
 <p>The LED matrix is controlled using row-column scanning. </p>
 
-<p>LED displays are often packaged as matrixes of LEDs arranged in rows of common anodes and columns of common cathodes, or the reverse. Here's a typical example of an 8x8 matrix, and its schematic:</p>
+<p>LED displays are often packaged as matrixes of LEDs arranged in rows of common anodes and columns of common cathodes, or the reverse. Here's a typical example of an 8x8 matrix schematic:</p>
 
-<p><img src="http://arduino.cc/en/uploads/Tutorial/LEDmatrix_img.jpg" alt=""><img src="http://arduino.cc/en/uploads/Tutorial/LEDmatrix_schem.png" alt=""></p>
+<p><img src="http://arduino.cc/en/uploads/Tutorial/LEDmatrix_schem.png" alt=""></p>
 
-<p>These can be very useful displays. To control a matrix, you connect both its rows and columns to your microcontroller. The columns are connected to the LEDs cathodes (see Figure 1), so a column needs to be high for any of the LEDs in that column to turn on. The rows are connected to the LEDs anodes, so the row needs to be low for an individual LED to turn on. If the row and the column are both high or both low, no voltage flows through the LED and it doesn’t turn on.</p>
+<p>To control a matrix, you connect both its rows and columns to the Arduino. The columns are connected to the LEDs cathodes (see schematic), so a column needs to be high for any of the LEDs in that column to turn on. The rows are connected to the LEDs anodes, so the row needs to be low for an individual LED to turn on. If the row and the column are both high or both low, no voltage flows through the LED and it doesn’t turn on.</p>
 
 <p>To control an individual LED, you set its column high and its row low. To control multiple LEDs in a row, you set the rows high, then take the column high, then set the lows row or high as appropriate; a low row will turn the corresponding LED on, and a high row will turn it off.</p>
 
@@ -92,8 +95,9 @@ Gkos keypad wiring</p>
 
 <p>Bitlash is an open source interpreted language shell and embedded programming environment for Arduino. The Bitlash shell runs entirely on the Arduino and supports many of the familiar Arduino functions. Bitlash interprets commands you type on the serial port or send from your favorite PC-side programming environment. I have integrated Bitlash with the GKOS keypad so instead of using a serial port to enter commands, the GKOS keypad is used instead.</p>
 
-<p><img src="https://github.com/billroy/bitlash/wiki/architecture_of_bitlash_for_arduino.jpg" alt="">
-Bitlash Architecture</p>
+<p><img src="https://github.com/billroy/bitlash/wiki/architecture_of_bitlash_for_arduino.jpg" alt=""></p>
+
+<p>Bitlash Architecture</p>
 
 <p>Bitlash Wiki:</p>
 
