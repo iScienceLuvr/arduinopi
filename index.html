@@ -44,7 +44,7 @@
 
 <h1></h1>
 
-<p>The Arduino Pi is a single board computer based on Arduino. The Arduino Pi has a six button keyboard known as GKOS, which is an chorded keyboard, and has an LED matrix based display. Right now, the LED matrix is a 5x5 LED matrix that scrolls. It has 4 digital pins for development using the Arduino platform. The scripting language is called Bitlash. I used Bitlash because it was easier to implement in the Arduino sketch than other programming languages.</p>
+<p>The Arduino Pi is a single board computer based on Arduino. The Arduino Pi has a six button keyboard known as GKOS, which is an chorded keyboard, and has an LED matrix based display. Right now, the LED matrix is a 5x5 LED matrix that scrolls. It has 4 digital pins for development using the Arduino platform. The scripting language is called Bitlash. Bitlash was used because it was easier to implement in the Arduino sketch than other programming languages such as Python or even Forth.</p>
 
 <h2>
 <a name="gkos-keypad" class="anchor" href="#gkos-keypad"><span class="octicon octicon-link"></span></a>GKOS Keypad</h2>
@@ -71,7 +71,7 @@
 
 <p>Gkos keypad wiring</p>
 
-<p>In the Arduino Pi project, the analog pins are used.</p>
+<p>The hardware is simply six buttons directly connected to Arduino's pins. In the Arduino Pi project, the analog pins are used.</p>
 
 <h2>
 <a name="led-matrix" class="anchor" href="#led-matrix"><span class="octicon octicon-link"></span></a>LED Matrix</h2>
@@ -82,9 +82,8 @@
 
 <p><img src="http://arduino.cc/en/uploads/Tutorial/LEDmatrix_schem.png" alt=""></p>
 
-<p>To control a matrix, you connect both its rows and columns to the Arduino. The columns are connected to the LEDs cathodes (see schematic), so a column needs to be high for any of the LEDs in that column to turn on. The rows are connected to the LEDs anodes, so the row needs to be low for an individual LED to turn on. If the row and the column are both high or both low, no voltage flows through the LED and it doesn’t turn on.</p>
-
-<p>To control an individual LED, you set its column high and its row low. To control multiple LEDs in a row, you set the rows high, then take the column high, then set the lows row or high as appropriate; a low row will turn the corresponding LED on, and a high row will turn it off.</p>
+<p>The 5x5 LED matrix is used as a scrolling text display to show the results of the commands.
+For more information about LED matrices and how they are controlled in the Arduino Pi, refer to the Deployment section.</p>
 
 <p>I used the code from the below link and leveraged it for a 5x5 matrix:</p>
 
@@ -93,19 +92,22 @@
 <h2>
 <a name="bitlash" class="anchor" href="#bitlash"><span class="octicon octicon-link"></span></a>Bitlash</h2>
 
-<p>Bitlash is an open source interpreted language shell and embedded programming environment for Arduino. The Bitlash shell runs entirely on the Arduino and supports many of the familiar Arduino functions. Bitlash interprets commands you type on the serial port or send from your favorite PC-side programming environment. I have integrated Bitlash with the GKOS keypad so instead of using a serial port to enter commands, the GKOS keypad is used instead.</p>
-
-<p><img src="https://github.com/billroy/bitlash/wiki/architecture_of_bitlash_for_arduino.jpg" alt=""></p>
-
-<p>Bitlash Architecture</p>
-
-<p>Bitlash Wiki:</p>
-
-<p><a href="https://github.com/billroy/bitlash/wiki/docindex">https://github.com/billroy/bitlash/wiki/docindex</a></p>
+<p>Bitlash is an open source interpreted language shell and embedded programming environment for Arduino. The Bitlash shell runs entirely on the Arduino and supports many of the familiar Arduino functions. Bitlash interprets commands you type on the serial port or send from your favorite PC-side programming environment. I have integrated Bitlash with the GKOS keypad so instead of using a serial port to enter commands, the GKOS keypad is used to write Bitlash commands.</p>
 
 <p>Bitlash website:</p>
 
 <p><a href="https://www.bitlash.net">https://www.bitlash.net</a></p>
+
+<h2>
+<a name="free-pins" class="anchor" href="#free-pins"><span class="octicon octicon-link"></span></a>Free pins</h2>
+
+<p>Due to the way the Arduino Pi was laid out, there are 4 digital pins that are free to use when used with an 
+Arduino Uno. Since the Arduino Pi is in its early stages of development (as of June 4, 2014), when Used with different Arduino boards, the number of free pins vary. For example, an Arduino Pro Mini would not only have 4 free digital pins but also 2 free analog pins.</p>
+
+<h3>
+<a name="using-free-pins" class="anchor" href="#using-free-pins"><span class="octicon octicon-link"></span></a>Using free pins</h3>
+
+<p>Currently, the only way to use those free pins are by using Bitlash commands. </p>
 
 <h1>
 <a name="repository" class="anchor" href="#repository"><span class="octicon octicon-link"></span></a>Repository</h1>
@@ -120,6 +122,13 @@
 <h1></h1>
 
 <p>To use the code posted in the repository, connect six buttons to the analog pins 0-5 and to the ground. Use a row-column scan LED Matrix (the code supports a 5x5 matrix) and connect them to digital pins 0-9. Refer to the schematic in the github repository</p>
+
+<h2>
+<a name="led-matrix-controlling" class="anchor" href="#led-matrix-controlling"><span class="octicon octicon-link"></span></a>LED matrix controlling</h2>
+
+<p>To control the 5x5 matrix, connect both its rows and columns to the Arduino. The columns are connected to the LEDs cathodes (see schematic), so a column needs to be high for any of the LEDs in that column to turn on. The rows are connected to the LEDs anodes, so the row needs to be low for an individual LED to turn on. If the row and the column are both high or both low, no voltage flows through the LED and it doesn’t turn on.</p>
+
+<p>To control an individual LED, set its column high and its row low. To control multiple LEDs in a row, you set the rows high, then take the column high, then set the rows low or high as appropriate; a low row will turn the corresponding LED on, and a high row will turn it off.</p>
 
 <h2>
 <a name="schematic" class="anchor" href="#schematic"><span class="octicon octicon-link"></span></a>Schematic</h2>
