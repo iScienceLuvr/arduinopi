@@ -345,7 +345,7 @@ void loop(){
   //gEntry.toCharArray(gEntrychar, 1);
   //strcpy(gEntrychar, gEntry);
   runBitlash();
-  doCommand(gEntry);
+  doCharacter(gEntry);
 }
 
 
