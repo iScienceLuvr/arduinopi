@@ -307,7 +307,7 @@ Gkos gkos(0, 1, 2, 3, 4, 5);
 float timeCount = 0;
 
 
-void setup() {
+void init() {
   initBitlash(57600);
   runBitlash();
   setOutputHandler(&serialHandler);
@@ -337,7 +337,7 @@ digitalWrite(rownum[thisPin], HIGH);
 
 
 
-void start(){ //must only be used within the loop function
+void run(){ //must only be used within the loop function
   gEntry = gkos.entry(); // Will return empty immediately if no entry 
   //String(gEntry);
   char gEntrychar;
