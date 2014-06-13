@@ -4,7 +4,9 @@
 class ArduinoPi
 {
   public:
-   start()
+   run()
+   show(byte * image, unsigned long duration)
+   void init()
   private:
 };
 #endif
