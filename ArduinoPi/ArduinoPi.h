@@ -6,7 +6,7 @@ class ArduinoPi
   public:
    ArduinoPi()
    show(byte * image, unsigned long duration)
-   void init()
+   void run()
   private:
   int i
   int thisPin
