@@ -1,5 +1,8 @@
 #include <Gkos.h>
 #include "bitlash.h"
+#include "Arduino.h"
+#include "ArduinoPi.h"
+
 int i;
 int rownum[5];
 int colnum[5];
