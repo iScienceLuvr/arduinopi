@@ -4,9 +4,13 @@
 class ArduinoPi
 {
   public:
-   run()
+   ArduinoPi()
    show(byte * image, unsigned long duration)
    void init()
   private:
+  int i
+  int thisPin
+  char* gEntry
+  char gEntrychar
 };
 #endif
