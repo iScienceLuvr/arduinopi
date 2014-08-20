@@ -87,9 +87,10 @@
 <p>The 5x5 LED matrix is used as a scrolling text display to show the results of the commands.
 For more information about LED matrices and how they are controlled in the Arduino Pi, refer to the Deployment section.</p>
 
-<p>I used the code from the below link:</p>
+<p>I used the code from the below link and leveraged it for a 5x5 matrix:</p>
 
-<p><a href="http://www.instructables.com/id/5X5-dot-matrix-on-Arduino-gets-text-from-pc-2/">http://www.instructables.com/id/5X5-dot-matrix-on-Arduino-gets-text-from-pc-2/</aref></p>
+<p><a href="http://blog.duklabs.com/?p=133">http://blog.duklabs.com/?p=133</a></p>
+
 <h2>
 <a name="bitlash" class="anchor" href="#bitlash"><span class="octicon octicon-link"></span></a>Bitlash</h2>
 
@@ -103,12 +104,13 @@ For more information about LED matrices and how they are controlled in the Ardui
 <a name="free-pins" class="anchor" href="#free-pins"><span class="octicon octicon-link"></span></a>Free pins</h2>
 
 <p>Due to the way the Arduino Pi was laid out, there are 4 digital pins that are free to use when used with an 
-Arduino Uno. Since the Arduino Pi is in its early stages of development (as of June 4, 2014), when used with different Arduino boards, the number of free pins vary. For example, an Arduino Pro Mini would not only have 4 free digital pins but also 2 free analog pins.</p>
+Arduino Uno. Since the Arduino Pi is in its early stages of development (as of June 4, 2014), when Used with different Arduino boards, the number of free pins vary. For example, an Arduino Pro Mini would not only have 4 free digital pins but also 2 free analog pins.</p>
 
 <h3>
-<a name="using-free-I/O-pins" class="anchor" href="#using-free-I/O-pins"><span class="octicon octicon-link"></span></a>Using free I/O pins</h3>
+<a name="using-free-pins" class="anchor" href="#using-free-pins"><span class="octicon octicon-link"></span></a>Using free pins</h3>
 
 <p>Currently, the only way to use those free pins are by using Bitlash commands. </p>
+
 <h1>
 <a name="repository" class="anchor" href="#repository"><span class="octicon octicon-link"></span></a>Repository</h1>
 
@@ -131,9 +133,24 @@ Arduino Uno. Since the Arduino Pi is in its early stages of development (as of J
 <p>To control an individual LED, set its column high and its row low. To control multiple LEDs in a row, you set the rows high, then take the column high, then set the rows low or high as appropriate; a low row will turn the corresponding LED on, and a high row will turn it off.</p>
 
 <h2>
-<a name="schematic" class="anchor" href="#schematic"><span class="octicon octicon-link"></span></a>Schematic</h2>
+<a name="hardware-schematics-and-pictures" class="anchor" href="#hardware-schematics-and-pictures"><span class="octicon octicon-link"></span></a>Hardware schematics and pictures</h2>
 
-<p><img src="http://123d.circuits.io/circuits/233178-arduino-pi/embed" alt=""></p>
+<h3>
+<a name="schematic" class="anchor" href="#schematic"><span class="octicon octicon-link"></span></a>Schematic:</h3>
+
+<p><img src="https://us-mg205.mail.yahoo.com/ya/download?mid=2_0_0_1_116366691_ANW%2FimIAABJQU%2FTTKQAAACvyuic&amp;pid=2&amp;fid=Inbox&amp;inline=1" alt="Schematic"></p>
+
+<h3>
+<a name="breadboard" class="anchor" href="#breadboard"><span class="octicon octicon-link"></span></a>​Breadboard:</h3>
+
+<p><img src="https://us-mg205.mail.yahoo.com/ya/download?mid=2_0_0_1_116370362_ANW%2FimIAABLAU%2FTV5gAAAN%2B1%2BfY&amp;pid=2&amp;fid=Inbox&amp;inline=1" alt="Breadboard"></p>
+
+<p><img src="https://us-mg205.mail.yahoo.com/ya/download?mid=2_0_0_1_116370362_ANW%2FimIAABLAU%2FTV5gAAAN%2B1%2BfY&amp;pid=4&amp;fid=Inbox&amp;inline=1" alt="Breadboard"></p>
+
+<h3>
+<a name="led-matrix-1" class="anchor" href="#led-matrix-1"><span class="octicon octicon-link"></span></a>LED Matrix:</h3>
+
+<p><img src="https://us-mg205.mail.yahoo.com/ya/download?mid=2_0_0_1_116371299_AJG%2FimIAABQWU%2FTW2wAAAIcZKAs&amp;pid=2&amp;fid=Inbox&amp;inline=1" alt="LED Matrix"></p>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/iScienceLuvr">iScienceLuvr</a></p>
